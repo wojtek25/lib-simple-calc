@@ -11,3 +11,9 @@ How to run tests
 
     phpunit
     phpunit  --coverage-html coverage/
+
+
+How to generate zipped archive
+------------------------------
+
+    git archive --format=zip --output=../lib-simple-calc.zip HEAD
