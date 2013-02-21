@@ -1,6 +1,8 @@
 <?php
 
-/*
+/**
+ * SimpleCalc library
+ *
  * This file is part of the TDD PHP project:
  *
  *     https://github.com/tdd-php
@@ -9,21 +11,21 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
+ *
  */
-
 
 namespace Gajdaw\TddExamples\SimpleCalc;
 
 /**
- *
  * SimpleCalc performs math operations:
- *     -addition
- *     -subtraction
- *     -multiplication
- *     -division
- *     -zero
+ * - addition
+ * - subtraction
+ * - multiplication
+ * - division
+ * - zero
  *
  * @author Włodzimierz Gajda <gajdaw@gajdaw.pl>
+ * @package PHPTDD
  */
 class SimpleCalc
 {
@@ -31,9 +33,9 @@ class SimpleCalc
     /**
      * Addition
      *
-     * @param $a
-     * @param $b
-     * @return mixed
+     * @param mixed $a First number (integer of float)
+     * @param mixed $b Second number (integer of float)
+     * @return mixed The sum of two numbers (integer of float)
      */
     public static function add($a, $b)
     {
