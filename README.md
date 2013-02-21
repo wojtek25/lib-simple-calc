@@ -16,4 +16,4 @@ How to run tests
 How to generate zipped archive
 ------------------------------
 
-    git archive --format=zip --output=../lib-simple-calc.zip HEAD
+    git archive --format=zip --output=../lib-simple-calc-master.zip HEAD
