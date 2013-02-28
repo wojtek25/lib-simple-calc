@@ -24,8 +24,9 @@ namespace Gajdaw\TddExamples\SimpleCalc;
  * - division
  * - zero
  *
- * @author Włodzimierz Gajda <gajdaw@gajdaw.pl>
  * @package PHPTDD
+ * @author  Włodzimierz Gajda <gajdaw@gajdaw.pl>
+ *
  */
 class SimpleCalc
 {
@@ -35,6 +36,7 @@ class SimpleCalc
      *
      * @param mixed $a First number (integer of float)
      * @param mixed $b Second number (integer of float)
+     *
      * @return mixed The sum of two numbers (integer of float)
      */
     public static function add($a, $b)
@@ -45,9 +47,10 @@ class SimpleCalc
     /**
      * Subtraction
      *
-     * @param $a
-     * @param $b
-     * @return mixed
+     * @param mixed $a First number (integer of float)
+     * @param mixed $b Second number (integer of float)
+     *
+     * @return mixed The difference of two numbers (integer of float)
      */
     public static function subtract($a, $b)
     {
@@ -57,9 +60,10 @@ class SimpleCalc
     /**
      * Multiplication
      *
-     * @param $a
-     * @param $b
-     * @return mixed
+     * @param mixed $a First number (integer of float)
+     * @param mixed $b Second number (integer of float)
+     *
+     * @return mixed The product of two numbers (integer of float)
      */
     public static function multiply($a, $b)
     {
@@ -69,19 +73,25 @@ class SimpleCalc
     /**
      * Division
      *
-     * @param $a
-     * @param $b
-     * @return float
+     * @param mixed $a First number (integer of float)
+     * @param mixed $b Second number (integer of float)
+     *
+     * @return float The result of division of two numbers
+     * @throws \InvalidArgumentException The exception is thrown when the divisor $b is equal to 0
      */
     public static function divide($a, $b)
     {
+        if ($b == 0) {
+            throw new \InvalidArgumentException('Divisor must not be equal to 0.');
+        }
+
         return $a / $b;
     }
 
     /**
      * Zero
      *
-     * @return int
+     * @return int The result is always equal to 0
      */
     public static function zero()
     {
