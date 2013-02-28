@@ -98,4 +98,14 @@ class SimpleCalc
         return 0;
     }
 
+    /**
+     * One
+     *
+     * @return int The result is always equal to 1
+     */
+    public static function one()
+    {
+        return 1;
+    }
+
 }
