@@ -75,4 +75,24 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, SimpleCalc::one());
     }
 
+    /**
+     * @dataProvider getIfMultiplyInversesDivideData
+     *
+     */
+    public function testIfMultiplyInversesDivide($a, $b)
+    {
+        $this->assertEquals($a, SimpleCalc::multiply(SimpleCalc::divide($a, $b), $b));
+        $this->assertEquals($a, SimpleCalc::divide(SimpleCalc::multiply($a, $b), $b), '', 0.001);
+    }
+
+    public function getIfMultiplyInversesDivideData()
+    {
+        return array(
+            array(100, 2),
+            array(97, 37),
+            array(123456345789, 0.000000000037),
+        );
+    }
+
+
 }
