@@ -70,4 +70,9 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(0, SimpleCalc::zero());
     }
 
+    public function testOne()
+    {
+        $this->assertEquals(1, SimpleCalc::one());
+    }
+
 }
