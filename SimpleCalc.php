@@ -120,4 +120,14 @@ class SimpleCalc
         return 1 / ($x + 1);
     }
 
+    /**
+     * SixtyNine
+     *
+     * @return int The result is always equal to 69
+     */
+    public static function sixtynine()
+    {
+        return 69;
+    }
+
 }
