@@ -108,4 +108,14 @@ class SimpleCalc
         return 1;
     }
 
+    /**
+     * Value of f(x) = 1 / (x + 1)
+     *
+     * @return float The result f(x)
+     */
+    public static function oneDivXPlusOne($x)
+    {
+        return 1 / ($x + 1);
+    }
+
 }
