@@ -111,6 +111,8 @@ class SimpleCalc
     /**
      * Value of f(x) = 1 / (x + 1)
      *
+     * @param mixed $x Integer of float
+     *
      * @return float The result f(x)
      */
     public static function oneDivXPlusOne($x)
