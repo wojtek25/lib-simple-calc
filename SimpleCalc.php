@@ -130,4 +130,16 @@ class SimpleCalc
         return 69;
     }
 
+    /**
+     * Value of f(x) = 1 + x
+     *
+     * @param mixed $x Integer of float
+     *
+     * @return float The result f(x)
+     */
+    public static function onePlusX($x)
+    {
+        return 1 + $x;
+    }
+
 }

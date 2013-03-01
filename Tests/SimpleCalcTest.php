@@ -117,6 +117,12 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(69, SimpleCalc::sixtynine());
     }
 
+    public function testonePlusX($x)
+    {
+        $this->assertEquals(5, SimpleCalc::onePlusX(4));
+
+    }
+
 
 
 
