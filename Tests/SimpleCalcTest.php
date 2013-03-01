@@ -112,6 +112,11 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    public function testSixtyNine()
+    {
+        $this->assertEquals(69, SimpleCalc::sixtynine());
+    }
+
 
 
 
