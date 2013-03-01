@@ -28,5 +28,8 @@ How to generate API documentation with PhpDocumentor?
 How to test coding standards with PHPCS?
 ----------------------------------------
 
+    phpcs  --standard=Symfony2 . --ignore=Tests --extensions=php --encoding=utf-8
+
+
     mkdir phpcs
     phpcs  --standard=Symfony2 . --ignore=Tests --extensions=php --encoding=utf-8 > phpcs/results.txt
