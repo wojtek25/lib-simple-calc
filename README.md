@@ -22,6 +22,10 @@ How to generate zipped archive?
 How to generate API documentation with PhpDocumentor?
 -----------------------------------------------------
 
+    pear
+
+    (creates %PHP_PEAR_PHP_BIN%)
+
     phpdoc -d . -t docs -i Tests/*
 
 
