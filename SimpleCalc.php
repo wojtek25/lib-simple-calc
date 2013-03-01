@@ -131,15 +131,12 @@ class SimpleCalc
     }
 
     /**
-     * Value of f(x) = 1 + x
+     * Funkcja 11
      *
-     * @param mixed $x Integer of float
-     *
-     * @return float The result f(x)
+     * @return float The result 11
      */
-    public static function onePlusX($x)
+    public static function Eleven()
     {
-        return 1 + $x;
+        return 11;
     }
-
 }
