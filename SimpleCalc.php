@@ -121,7 +121,7 @@ class SimpleCalc
     }
 
     /**
-     * SixtyNine
+     * Sixty nine
      *
      * @return int The result is always equal to 69
      */
@@ -131,12 +131,13 @@ class SimpleCalc
     }
 
     /**
-     * Funkcja 11
+     * Eleven
      *
-     * @return float The result 11
+     * @return float The result is always equal to 11
      */
     public static function eleven()
     {
         return 11;
     }
+
 }
