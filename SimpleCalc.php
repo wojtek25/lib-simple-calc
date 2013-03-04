@@ -125,7 +125,7 @@ class SimpleCalc
      *
      * @return int The result is always equal to 69
      */
-    public static function sixtynine()
+    public static function sixtyNine()
     {
         return 69;
     }
@@ -135,7 +135,7 @@ class SimpleCalc
      *
      * @return float The result 11
      */
-    public static function Eleven()
+    public static function eleven()
     {
         return 11;
     }
