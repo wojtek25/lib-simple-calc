@@ -139,5 +139,20 @@ class SimpleCalc
     {
         return 11;
     }
+	/**
+     * oneDivX
+     *
+     * @param mixed $x First number (integer of float)
+     *
+     * @return float The result of division of 1/x
+     * @throws \InvalidArgumentException The exception is thrown when the divisor $b is equal to 0
+     */
+	public static function oneDivX ($x){
+		if ($x == 0) {
+            throw new \InvalidArgumentException('Divisor must not be equal to 0.');
+        }
+		return 1/$x;
+	}
+	
 
 }

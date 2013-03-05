@@ -122,6 +122,11 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(11, SimpleCalc::Eleven());
 
     }
+	public function testOneDivX(){
+		$this->assertEquals(0.5, SimpleCalc::oneDivX(2));
+        $this->assertEquals(0.25, SimpleCalc::oneDivX(4));
+        $this->assertEquals(0.1, SimpleCalc::oneDivX(10));
+	}
 
 
 
