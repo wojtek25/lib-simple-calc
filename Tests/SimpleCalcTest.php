@@ -128,8 +128,12 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(0.1, SimpleCalc::oneDivX(10));
 	}
 
-
-
-
-
+    public function testExponentiation()
+    {
+        $this->assertEquals(36.0, SimpleCalc::exponentiation(6,2));
+        $this->assertEquals(15.625, SimpleCalc::exponentiation(2.5,3));
+        $this->assertEquals(4.0, SimpleCalc::exponentiation(2,2));
+        $this->assertEquals(1.0, SimpleCalc::exponentiation(20,0));
+        $this->assertEquals(5.0, SimpleCalc::exponentiation(5,1));
+    }
 }
