@@ -122,11 +122,11 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(11, SimpleCalc::Eleven());
 
     }
-	public function testOneDivX(){
-		$this->assertEquals(0.5, SimpleCalc::oneDivX(2));
+    public function testOneDivX(){
+        $this->assertEquals(0.5, SimpleCalc::oneDivX(2));
         $this->assertEquals(0.25, SimpleCalc::oneDivX(4));
         $this->assertEquals(0.1, SimpleCalc::oneDivX(10));
-	}
+    }
 
     public function testExponentiation()
     {
@@ -136,8 +136,15 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1.0, SimpleCalc::exponentiation(20,0));
         $this->assertEquals(5.0, SimpleCalc::exponentiation(5,1));
     }
-	
-	public function testLinearEquation(){
+
+    public function testLinearEquation()
+    {
         $this->assertEquals(0.5, SimpleCalc::LinearAquationAxb(2,1));
     }
+
+    public function testOneDivSquareXMinus1()
+    {
+        $this->assertEquals(1 / 3, SimpleCalc::oneDivSquareXMinus1(2));
+    }
+
 }

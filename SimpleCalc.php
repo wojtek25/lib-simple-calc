@@ -194,4 +194,16 @@ class SimpleCalc
         return $b / $a;
     }
 
+    /**
+     * Result of 1 / (x^2 - 1)
+     *
+     * @param mixed $x Argument (integer or float)
+     *
+     * @return float The result of 1 / (x^2 - 1)
+     */
+    public static function oneDivSquareXMinus1($x)
+    {
+        return 1 / ($x * $x - 1);
+    }
+
 }
