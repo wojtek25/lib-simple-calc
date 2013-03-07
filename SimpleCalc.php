@@ -156,4 +156,27 @@ class SimpleCalc
         return 1/$x;
     }
 
+    /**
+     * Exponentiation
+     *
+     * @param mixed $a Base (integer of float)
+     * @param mixed $e Exponent (integer)
+     *
+     * @return float The result of $a^$e
+     */
+    public static function exponentiation($a, $e)
+    {
+        if ($e == 0) {
+            return 1;
+        }elseif ($e == 1){
+            return $a;
+        }
+
+        $result = $a;
+        for ($i = 2; $i <= $e; $i++) {
+            $result = $result * $a;
+        }
+        return $result;
+    }
+
 }
