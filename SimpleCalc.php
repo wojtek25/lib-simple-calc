@@ -179,5 +179,18 @@ class SimpleCalc
 
         return $result;
     }
+	
+	/** 
+     * Value of ax=b
+     * 
+     * @param mixed $x First number (integer or float)
+     * @param mixed $y Second number (integer or float)
+     * 
+     * @return float The result of ax=b
+     */
+    
+    public static function LinearAquationAxb($a, $b){
+        return $b/$a;
+    }
 
 }
