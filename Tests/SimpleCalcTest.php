@@ -136,4 +136,8 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1.0, SimpleCalc::exponentiation(20,0));
         $this->assertEquals(5.0, SimpleCalc::exponentiation(5,1));
     }
+	
+	public function testLinearEquation(){
+        $this->assertEquals(0.5, SimpleCalc::LinearAquationAxb(2,1));
+    }
 }
