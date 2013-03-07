@@ -168,7 +168,7 @@ class SimpleCalc
     {
         if ($e == 0) {
             return 1;
-        }elseif ($e == 1){
+        } elseif ($e == 1) {
             return $a;
         }
 
@@ -176,6 +176,7 @@ class SimpleCalc
         for ($i = 2; $i <= $e; $i++) {
             $result = $result * $a;
         }
+
         return $result;
     }
 
