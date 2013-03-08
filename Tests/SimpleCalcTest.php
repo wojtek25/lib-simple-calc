@@ -207,4 +207,29 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         SimpleCalc::fOnePlusXOneMinusX(1);
     }
+
+    /**
+     * @dataProvider getTwentyEightPlusXDivOneMinusXData
+     *
+     */
+    public function testTwentyEightPlusXDivOneMinusX($x, $result)
+    {
+        $this->assertEquals($result, SimpleCalc::twentyEightPlusXDivOneMinusX($x));
+    }
+
+    public function getTwentyEightPlusXDivOneMinusXData()
+    {
+        return array(
+            array(0, 28)
+        );
+    }
+
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testTwentyEightPlusXDivOneMinusXException()
+    {
+        SimpleCalc::twentyEightPlusXDivOneMinusX(1);
+    }
 }

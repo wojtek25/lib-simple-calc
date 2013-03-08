@@ -241,4 +241,22 @@ class SimpleCalc
         return (1 + $x)  / (1 - $x);
     }
 
+    /**
+     * Function f(x) = (28+x)/(1-x)
+     *
+     * @param mixed $x Argument (integer of float)
+     *
+     * @return float The result of (228+x)/(1-x)
+     * @throws \InvalidArgumentException The exception is thrown when the divisor $b is equal to 1
+     *
+     */
+
+    public static function twentyEightPlusXDivOneMinusX($x)
+    {
+        if ($x == 1) {
+            throw new \InvalidArgumentException('Divisor must not be equal to 0.');
+        }
+
+        return ((28 + $x) / ( 1 - $x ));
+    }
 }
