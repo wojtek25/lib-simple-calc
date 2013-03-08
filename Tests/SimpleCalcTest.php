@@ -147,4 +147,17 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1 / 3, SimpleCalc::oneDivSquareXMinus1(2));
     }
 
+    public function testXSquarePlus1DivideByXMinus1()
+    {
+        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(5));
+        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(3));
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testXSquarePlus1DivideByXMinus1DivideByZero()
+    {
+       SimpleCalc::xSquarePlus1DivideByXMinus1(1);
+    }
 }
