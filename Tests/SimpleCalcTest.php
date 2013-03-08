@@ -122,6 +122,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(11, SimpleCalc::Eleven());
 
     }
+
     /**
      * @dataProvider getOneDivXData
      *
@@ -167,6 +168,31 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     public function testOneDivSquareXMinus1()
     {
         $this->assertEquals(1 / 3, SimpleCalc::oneDivSquareXMinus1(2));
+    }
+
+    /**
+     * @dataProvider getFOnePlusXOneMinusXData
+     *
+     */
+    public function testFOnePlusXOneMinusX($x,$result)
+    {
+        $this->assertEquals($result, SimpleCalc::fOnePlusXOneMinusX($x));
+    }
+
+    public function getFOnePlusXOneMinusXData()
+    {
+        return array(
+            array(2, -3),
+
+        );
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testFOnePlusXOneMinusXException()
+    {
+        SimpleCalc::fOnePlusXOneMinusX(1);
     }
 
 }

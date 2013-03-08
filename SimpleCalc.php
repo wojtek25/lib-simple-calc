@@ -139,6 +139,7 @@ class SimpleCalc
     {
         return 11;
     }
+
     /**
      * oneDivX
      *
@@ -204,6 +205,23 @@ class SimpleCalc
     public static function oneDivSquareXMinus1($x)
     {
         return 1 / ($x * $x - 1);
+    }
+
+    /**
+     * Function f(x) = (1 + x) / (1 - x)
+     *
+     * @param mixed $x Argument (integer of float)
+     *
+     * @return float The result of f(x) = (1 + x) / (1 - x)
+     * @throws \InvalidArgumentException The exception is thrown when x = 1
+     */
+    public static function fOnePlusXOneMinusX($x)
+    {
+        if ($x == 1) {
+            throw new \InvalidArgumentException('$x must not be equal to 1.');
+        }
+
+        return (1 + $x)  / (1 - $x);
     }
 
 }
