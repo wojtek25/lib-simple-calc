@@ -149,7 +149,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
 
     public function testXSquarePlus1DivideByXMinus1()
     {
-        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(5));
+        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(2));
         $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(3));
     }
 
