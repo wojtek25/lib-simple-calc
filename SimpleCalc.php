@@ -208,6 +208,23 @@ class SimpleCalc
     }
 
     /**
+     * Function f(x) = (x * x + 1) / (x - 1)
+     *
+     * @param mixed $x Argument (integer or float)
+     *
+     * @return float The result of (x * x + 1) / (x - 1)
+     * @throws \InvalidArgumentException The exception is thrown when the divisor $x is equal to 1
+     */
+    public static function xSquarePlus1DivideByXMinus1($x)
+    {
+        if($x == 1)
+        {
+            throw new \InvalidArgumentException('Divisor must not be equal to 0.');
+        }
+        return ($x * $x + 1) / ($x - 1);
+    }
+
+     /**
      * Function f(x) = (1 + x) / (1 - x)
      *
      * @param mixed $x Argument (integer of float)

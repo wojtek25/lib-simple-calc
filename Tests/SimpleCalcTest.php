@@ -170,6 +170,20 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1 / 3, SimpleCalc::oneDivSquareXMinus1(2));
     }
 
+    public function testXSquarePlus1DivideByXMinus1()
+    {
+        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(2));
+        $this->assertEquals(5, SimpleCalc::xSquarePlus1DivideByXMinus1(3));
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testXSquarePlus1DivideByXMinus1DivideByZero()
+    {
+        SimpleCalc::xSquarePlus1DivideByXMinus1(1);
+    }
+
     /**
      * @dataProvider getFOnePlusXOneMinusXData
      *
@@ -183,7 +197,6 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             array(2, -3),
-
         );
     }
 
@@ -194,6 +207,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         SimpleCalc::fOnePlusXOneMinusX(1);
     }
+
     /**
      * @dataProvider getTwentyEightPlusXDivOneMinusXData
      *
@@ -218,6 +232,4 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         SimpleCalc::twentyEightPlusXDivOneMinusX(1);
     }
-
-
 }
