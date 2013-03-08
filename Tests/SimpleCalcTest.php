@@ -123,11 +123,32 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    public function testOneDivX()
+    /**
+     * @dataProvider getOneDivXData
+     *
+     */
+    public function testOneDivX($x, $result)
     {
-        $this->assertEquals(0.5, SimpleCalc::oneDivX(2));
-        $this->assertEquals(0.25, SimpleCalc::oneDivX(4));
-        $this->assertEquals(0.1, SimpleCalc::oneDivX(10));
+        $this->assertEquals($result, SimpleCalc::oneDivX($x));
+    }
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testOneDIvZero()
+    {
+        SimpleCalc::oneDivX(0);
+    }
+    /**
+     * @dataProvider getOneDivXData
+     *
+     */
+    public function getOneDivXData()
+    {
+        return array(
+            array(1, 1),
+            array(2, 0.5),
+            array(10, 0.1),
+        );
     }
 
     public function testExponentiation()
