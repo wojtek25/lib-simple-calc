@@ -194,7 +194,6 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         SimpleCalc::fOnePlusXOneMinusX(1);
     }
-
     /**
      * @dataProvider getTwentyEightPlusXDivOneMinusXData
      *
@@ -210,6 +209,7 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
             array(0, 28)
         );
     }
+
 
     /**
      * @expectedException InvalidArgumentException
