@@ -122,10 +122,33 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(11, SimpleCalc::Eleven());
 
     }
-    public function testOneDivX(){
-        $this->assertEquals(0.5, SimpleCalc::oneDivX(2));
-        $this->assertEquals(0.25, SimpleCalc::oneDivX(4));
-        $this->assertEquals(0.1, SimpleCalc::oneDivX(10));
+
+    /**
+     * @dataProvider getOneDivXData
+     *
+     */
+    public function testOneDivX($x, $result)
+    {
+        $this->assertEquals($result, SimpleCalc::oneDivX($x));
+    }
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testOneDIvZero()
+    {
+        SimpleCalc::oneDivX(0);
+    }
+    /**
+     * @dataProvider getOneDivXData
+     *
+     */
+    public function getOneDivXData()
+    {
+        return array(
+            array(1, 1),
+            array(2, 0.5),
+            array(10, 0.1),
+        );
     }
 
     public function testExponentiation()
@@ -158,6 +181,30 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
      */
     public function testXSquarePlus1DivideByXMinus1DivideByZero()
     {
-       SimpleCalc::xSquarePlus1DivideByXMinus1(1);
+        SimpleCalc::xSquarePlus1DivideByXMinus1(1);
+    }
+
+    /**
+     * @dataProvider getFOnePlusXOneMinusXData
+     *
+     */
+    public function testFOnePlusXOneMinusX($x,$result)
+    {
+        $this->assertEquals($result, SimpleCalc::fOnePlusXOneMinusX($x));
+    }
+
+    public function getFOnePlusXOneMinusXData()
+    {
+        return array(
+            array(2, -3),
+        );
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testFOnePlusXOneMinusXException()
+    {
+        SimpleCalc::fOnePlusXOneMinusX(1);
     }
 }
