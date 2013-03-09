@@ -259,4 +259,19 @@ class SimpleCalc
 
         return ((28 + $x) / ( 1 - $x ));
     }
+
+    /**
+     * Function f(x) = (9+x)*5
+     *
+     * @param mixed $x Argument (integer of float)
+     *
+     * @return float The result of (9+x)*5 
+     *
+     */
+
+    public static function NinePlusXMultiplyFive($x)
+    {
+        return (9 + $x) * 5;
+    }
+
 }
