@@ -232,4 +232,21 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     {
         SimpleCalc::twentyEightPlusXDivOneMinusX(1);
     }
+    
+    
+     /**
+     * @dataProvider getNinePlusXMultiplyFive
+     *
+     */
+    public function testNinePlusXMultiplyFive($x, $result)
+    {
+        $this->assertEquals($result, SimpleCalc::NinePlusXMultiplyFive($x));
+    }
+
+    public function getNinePlusXMultiplyFive()
+    {
+        return array(
+            array(1, 50)
+        );
+    }
 }
