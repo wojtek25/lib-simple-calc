@@ -217,10 +217,10 @@ class SimpleCalc
      */
     public static function xSquarePlus1DivideByXMinus1($x)
     {
-        if($x == 1)
-        {
+        if($x == 1) {
             throw new \InvalidArgumentException('Divisor must not be equal to 0.');
         }
+
         return ($x * $x + 1) / ($x - 1);
     }
 
@@ -265,10 +265,9 @@ class SimpleCalc
      *
      * @param mixed $x Argument (integer of float)
      *
-     * @return float The result of (9+x)*5 
+     * @return float The result of (9+x)*5
      *
      */
-
     public static function NinePlusXMultiplyFive($x)
     {
         return (9 + $x) * 5;
