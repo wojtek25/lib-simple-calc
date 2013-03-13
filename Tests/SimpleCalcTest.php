@@ -249,4 +249,20 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
             array(1, 50)
         );
     }
+    
+    /**
+     * @dataProvider getOneDivXPlusFive
+     * 
+     */
+    
+    public function testOneDivXPlusFive($x, $result){
+        $this->assertEquals($result, SimpleCalc::oneDivXPlusFive($x));
+    }
+    
+    public function getOneDivXPlusFive(){
+        return array(
+            array(5, 0.1)
+        );
+    }
+  
 }
