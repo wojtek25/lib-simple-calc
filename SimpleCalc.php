@@ -286,7 +286,7 @@ class SimpleCalc
             throw new \InvalidArgumentException('Divisor must not be equal to -5.');
         }
         
-        return 0.1;
+        return 1/($x+5);
     }
 
 }

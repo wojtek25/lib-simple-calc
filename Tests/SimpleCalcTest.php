@@ -261,7 +261,8 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     
     public function getOneDivXPlusFive(){
         return array(
-            array(5, 0.1)
+            array(5, 0.1),
+            array(-5, 0)
         );
     }
   
