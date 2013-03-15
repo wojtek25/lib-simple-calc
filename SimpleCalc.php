@@ -272,5 +272,21 @@ class SimpleCalc
     {
         return (9 + $x) * 5;
     }
+    
+    /*
+     * F(x) = 1/(x+5)
+     * 
+     * @param mixed $x Argument (integer or float)
+     * 
+     * @return float The result of F(x)
+     */
+    
+    public static function oneDivXPlusFive($x){
+        if ($x == -5) {
+            throw new \InvalidArgumentException('Divisor must not be equal to -5.');
+        }
+        
+        return 1/($x+5);
+    }
 
 }
