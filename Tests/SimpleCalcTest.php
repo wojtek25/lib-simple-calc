@@ -262,8 +262,37 @@ class SimpleCalcTest extends \PHPUnit_Framework_TestCase
     public function getOneDivXPlusFive(){
         return array(
             array(5, 0.1),
-            array(-5, 0)
+            array(-0.5, 1/4.5)
         );
     }
-  
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testOneDivXPlusFiveException()
+    {
+        SimpleCalc::oneDivXPlusFive(-5);
+    }
+
+    /**
+     * @dataProvider getXPlusYDivXMinusY
+     *
+     */
+
+    public function testXPlusYDivXMinusY($x, $y, $result){
+        $this->assertEquals($result, SimpleCalc::xPlusYDivXMinusY($x, $y));
+    }
+
+    public function getXPlusYDivXMinusY(){
+        return array(
+            array(5, 3, 4),
+            array(-1, 4, -3/5)
+        );
+    }
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testXPlusYDivXMinusYException()
+    {
+        SimpleCalc::xPlusYDivXMinusY(3,3);
+    }
 }

@@ -289,4 +289,20 @@ class SimpleCalc
         return 1/($x+5);
     }
 
+    /*
+     * F(x) = (x + y) / (x - y)
+     *
+     * @param mixed $x Argument (integer or float)
+     * @param mixed $x Argument (integer or float)
+     *
+     * @return float The result of F(x)
+     */
+
+    public static function xPlusYDivXMinusY($x, $y){
+        if ($x == $y) {
+            throw new \InvalidArgumentException('$x must not be equal to $y.');
+        }
+
+        return ($x + $y) / ($x - $y);
+    }
 }
